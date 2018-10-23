@@ -4,8 +4,6 @@ import { createStore } from "redux";
 /**
  * action 创建函数
  */
-
-
 const INCREMENT = 'INCREMENT'
 const DECREMENT = 'DECREMENT'
 export function increment() {
@@ -46,10 +44,11 @@ const unsubscribe = store.subscribe(()=>console.log("nextState",store.getState()
 
 
 //发起action
-store.dispatch(increment())
-store.dispatch(increment())
-store.dispatch(decrement())
+store.dispatch(increment()); //加一；counter:1
+store.dispatch(increment()); //加一；counter:2
+store.dispatch(decrement()); //减一；counter:1
 
 
 //注销action的监听
 unsubscribe();
+
