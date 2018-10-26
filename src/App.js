@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./counter";
-import AppWrapper from "./react-redux-demo";
+// import AppWrapper from "./react-redux-demo";
+import Todo from "./todoList/index";
+
 class App extends Component {
   render() {
     return (
@@ -10,7 +12,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <AppWrapper />
+        <Todo />
       </div>
     );
   }
